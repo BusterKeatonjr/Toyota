@@ -1,16 +1,15 @@
 var mongoose = require('mongoose')
-mongoose.connect('mongodb://localhost/test')
+mongoose.connect('mongodb://localhost/test1')
+var car = require("./models/car").car
 
-var schema = mongoose.Schema({ name: String })
 
-schema.methods.meow = function(){
-    console.log(this.get("name") + " сделал врум")
-}
+var car = new Car({
+title: "Маштна",
+})
 
-var car = mongoose.model('car', schema)
 
-var kitty = new car({ name: 'Машина' })
-kitty.save(function (err) {
-    kitty.meow()
+console.log(car)
+car.save(function(err, car, affected){
+console.log(car.title)
 })
 
