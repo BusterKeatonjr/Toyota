@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 
 /* GET home page. */
-r/* Страница Карамельки */
+/* Страница Camry */
 router.get('/CAMRY', function(req, res, next) {
   res.render('car', {
       title: "Camry",
@@ -11,7 +11,7 @@ router.get('/CAMRY', function(req, res, next) {
   });
 });
 
-/* Страница Компота */
+/* Страница Crown */
 router.get('/CROWN', function(req, res, next) {
   res.render('car', {
       title: "Crown",
@@ -20,7 +20,7 @@ router.get('/CROWN', function(req, res, next) {
   });
 });
 
-/* Страница Коржика */
+/* Страница Prius */
 router.get('/PRIUS', function(req, res, next) {
   res.render('car', {
       title: "Prius",
