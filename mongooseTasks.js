@@ -3,7 +3,7 @@ mongoose.connect('mongodb://localhost/test1')
 var car = require("./models/car").car
 
 
-var car = new Car({
+var car = new car({
 title: "Маштна",
 })
 
