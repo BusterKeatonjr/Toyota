@@ -20,7 +20,13 @@ router.get('/:nick', function(req, res, next) {
           desc: car.desc
       })
   })
-})
+});
+router.post('/logout', function(req, res, next) {
+  req.session.destroy()
+  res.locals.user = null
+  res.redirect('/')
+});
+
 /* GET login/registration page. */
 router.get('/logreg', function(req, res, next) {
   res.render('logreg',{title: 'Вход'});
