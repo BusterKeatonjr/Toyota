@@ -48,6 +48,8 @@ Car.find(null,{_id:0,title:1,nick:1},function(err,result){
 })
 
 app.use(require("./middleware/createMenu.js"))
+app.use(require("./middleware/createUser.js"))
+
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/cars', cars);
